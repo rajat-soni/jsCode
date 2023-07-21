@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("button").click(function(){
+    var days = [];
+    $.each($("input[name='directions']:checked"), function(){
+     days.push($(this).val());
+   
+    });
+    alert("Selected say(s) are: " + days.join(" and "));
+  });
+});
+</script>
+</head>
+<body>
+<h3>Select Day(s)</h3>
+<label><input type="checkbox" value="mon" name="directions"> Monday</label>
+<label><input type="checkbox" value="tue" name="directions"> Tuesday</label>
+<label><input type="checkbox" value="wed" name="directions"> Wednesday</label>
+<label><input type="checkbox" value="thu" name="directions"> Thursday</label>
+<label><input type="checkbox" value="fri" name="directions"> Friday</label>
+<br> <br><button type="button">Get selected day(s)</button>
+</body>
+</html>

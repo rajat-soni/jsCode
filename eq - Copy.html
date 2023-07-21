@@ -1,0 +1,24 @@
+<html>  
+  
+<head>  
+<title> jQuery eq() method </title>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>  
+<script>  
+$(document).ready(function() {  
+$(".para").eq(1).css({ "color": "red", "fontSize": "20px", "fontWeight": "bold" });  
+$(".para").eq(3).css({ "color": "blue", "fontSize": "20px", "fontWeight": "bold" });  
+});  
+</script>  
+</head>  
+  
+<body>  
+<h3> This is an example of using the eq() method. </h3>  
+<h4> Index always starts with 0, so the position of first value is 0 instead of 1. </h4>  
+<p class = "para"> First Paragraph </p>  
+<p class = "para"> Second Paragraph </p>  
+<p class = "para"> Third Paragraph </p>  
+<p class = "para"> Fourth Paragraph </p>  
+<p class = "para"> Fifth Paragraph </p>  
+</body>  
+  
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('#myTxt').on('input change', function() {
+    if($(this).val() != '') {
+      $('#mySubmit').prop('disabled', false);
+    } else {
+      $('#mySubmit').prop('disabled', true);
+    }
+  });
+});
+</script>
+</head>
+<body>
+  <input type="text" id="myTxt" />
+  <input type="submit" id="mySubmit" disabled="disabled" value="Search"/>
+</body>
+</html>

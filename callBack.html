@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+</head>
+<body>
+	<h3>
+		Call back functions
+	</h3>
+	<p id = "vi"></p>
+
+</body>
+<script>
+
+	const person = {
+        id : 1,
+	    name: 'Wes',
+	    job: 'Web Developer',
+	    city: 'Hamilton',
+	    bio: 'Wes is a really cool guy that loves to teach web development!'
+       
+	}
+
+
+
+
+
+
+
+	function mainFun(callback){
+
+		console.log("Please wait table is loading..");
+       // Use setTimeout to simulate an asynchronous operation
+		setTimeout(function() {
+			callback();		
+
+		},2000);
+
+
+         
+	}
+
+
+// Define the callback function
+	function callBackFun(){
+        
+         	var i =   `<table class="table">
+							<thead>
+							    <tr>
+								    <th scope="col">Name</th>
+								    <th scope="col">Job</th>
+								    <th scope="col">City</th>
+								    <th scope="col">Action</th>
+							    </tr>
+							</thead>
+							<tbody>
+							    <tr>  
+								    <td>${person.name}</td>
+								    <td>${person.job}</td>
+								    <td>${person.city}</td>
+								    <td><button class="btn btn-sm btn-danger">Delete</button></td>
+							    </tr>
+							    
+
+							 
+							    
+							</tbody>
+						</table>`;
+				
+          var doc = document.getElementById('vi')
+          doc.innerHTML = i;
+    }
+
+   
+// Call the main function with the callback function
+mainFun(callBackFun);
+
+	// var numbers = [1, 2, 3, 4, 5];
+ 
+// Define the main function
+//function mainFunction(callback) {
+  //console.log("Performing operation...");
+  // Use Array.forEach to loop through the array of numbers
+    //numbers.forEach(callback);
+//}
+ 
+// Define the callback function
+//function callbackFunction(number) {
+  //console.log("Result: " + number);
+//}
+ 
+// Call the main function with the callback function
+//mainFunction(callbackFunction);
+// This code is contributed by Veerendra Singh Rajpoot
+
+</script>
+
+</body>
+</html>

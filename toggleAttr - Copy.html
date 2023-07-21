@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn1" onclick = "changePic()"> CLICK ME </button>
+<br>
+<img src="pic1.png" style = "width:50px;">
+<img id="blue" src="pic2.jpg " style = "width:50px; display:none;" >
+
+<script>
+
+	function changePic() {
+    var elm = $("#blue")
+    var src = elm.attr('src');
+    if(src === "pic2.jpg")
+      elm.attr('src', 'pic1.png');
+    else
+      elm.attr('src', 'pic2.jpg').show();
+  };
+
+</script>
+</body>
+</html>

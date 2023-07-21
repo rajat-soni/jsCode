@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+</style>
+</head>
+<body>
+	<input type="range" id = "txt" ><br>
+	
+	<p id = "result">0</p>
+
+
+	<script>
+		
+		txt.value = 0;
+		setInterval( ()=>{
+			txt.value++;
+			result.innerText = txt.value;
+
+
+		 },100)
+	</script>
+</body>
+</html>

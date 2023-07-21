@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+</head>
+<body>
+
+
+
+<script>
+function greetings(username) {
+  alert('Welcome ' + username);
+}
+//the function declaration above is to be passed into the function below thereby making it a callback function.
+
+function saveUserName(callback) {
+  var name = prompt('Please enter your username.');
+  callback("Rajat");
+}
+//the above function states the callback function as a parameter
+
+saveUserName(greetings);
+//the greetings function (the callback function), is initially declared, then invoked by passing it as an argument into another function.
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("button").click(function(){
+    // if ($("input [type = 'checkbox']:checked")) // first way  //
+    // {
+        if ($("input [type = 'checkbox']").is(':checked')) //second way //
+    {
+      alert($('.chk').val());
+    }
+  });
+});
+</script>
+</head>
+<body>
+<label><input type="checkbox" value="myChk" class="chk">Select This</label>
+<br>
+<button type="button">Get CheckBox Value</button>
+</body>
+</html>

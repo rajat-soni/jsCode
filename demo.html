@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+</style>
+</head>
+<body>
+	<input type="text" id = "txt" name="rajat" value = "rajat" onclick = "getValue(this)"><br>
+	
+	<p id = "result"></p>
+
+
+	<script>
+		
+		function getValue(e){
+			console.log(e.value);
+
+            if(e.value == 'mohan') return;
+            
+			
+			let txt = document.getElementById('txt');
+			
+
+			let txtValue = txt.value;
+			
+			let result = document.getElementById('result');
+
+			result.innerText = txtValue;
+				
+			
+		}
+	    
+	
+	</script>
+</body>
+</html>

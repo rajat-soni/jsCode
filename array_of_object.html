@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>js alert</title>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+	<h1> Example of array of object </h1>
+
+	<script>
+let cars = [
+
+		  {
+		    "color": "purple",
+		    "type": "minivan",
+		    "registration": new Date('2017-01-03'),
+		    "capacity": 7
+		  }, // first array of object mean 0 index pe hi sari value hoti hai like console.log(car[0].name) console.log(car[0].type) output =  purple , minivan  //
+		  {
+		   "color": "red",
+		   "type": "cabrio",
+		   "registration": new Date('2016-05-02'),
+		   "capacity": 2
+
+			  }, // second  object  mean 1 index pe hi sari value hoti hai  link console.log(car[1].name) console.log(car[1].type) etc. o//t = green minivan //
+ 
+			{
+			 "color": "red",
+			 "type": "cabrio",
+			 "registration": new Date('2016-05-011'),
+			 "capacity": 1
+
+			  }, // second  object  mean 1 index pe hi sari value hoti hai  link console.log(car[1].name) console.log(car[1].type) etc. o//t = green minivan //
+        ]
+
+
+  var car1 = {
+			 "color": "hello",
+			 "type": "cabrio",
+			 "registration": new Date('2016-05-011'),
+			 "capacity": 1
+
+			  }
+
+			  cars.push(car1);
+			  console.warn(cars);
+
+// let car = cars.find(car => car.color == "red");
+// console.log(car)
+
+	
+	
+	
+</script>
+
+</body>
+</html>
+
