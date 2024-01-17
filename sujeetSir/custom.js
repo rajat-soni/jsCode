@@ -9,6 +9,8 @@ $(document).ready(function() {
     required: true,
     minlength: 2
     },
+	
+	
 
     country: {
         required: true
