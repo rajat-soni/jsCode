@@ -35,26 +35,18 @@
 </div>
 
 <script>
-     const form = document.querySelector('form');
-    
-    form.addEventListener('submit', (e) => {
-    e.preventDefault();
-     const formData = new FormData(form)
-
-     console.log(formData)
-
-     for(item of formData){
-        console.log(item[0],item[1]);
-     }
-    })
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{2,26}$/; 
+  
+let pass1 = "Ra@1"; 
+let pass2 = "GeeksforGeeks"; 
+let pass3 = "Abcdefghijklmnopque@123"; 
+  
+console.log(pass1, regex.test(pass1)); 
+console.log(pass2, regex.test(pass2)); 
+console.log(pass3, regex.test(pass3));
 </script>
 </body>
 </html>
 
 
-<form action="" id="loginForm">
-  <h1>Login</h1>
-  <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
-  <input type="password" id="password" class="form-control" placeholder="Enter your Password...">
-  <button type="submit">Submit</button>
-</form>
+

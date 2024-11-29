@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="js/multiselect/jquery.multiselect.css">
+		<script src="js/multiselect/jquery.multiselect.js"></script>
+
+
+<!-- jQuery library -->
+<!-- jQuery library -->
+
+<!-- JS & CSS library of MultiSelect plugin -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
+
+
+	 <style>
+		*{
+			margin: 0; padding: 0; box-sizing: border-box;
+		}
+		
+	</style> 
+
+
+</head>
+
+<body>
+	<div class="container-fluid bg-dark" style="min-height: 50vh;">
+		<div class="text-center">
+			
+		</div>
+
+		<!-- These modifications are done to make the webpage
+			adaptive to the screen size and automatically
+			reduce the size when screen is minimized -->
+		<div class="row justify-content-center align-items-center">
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="form-group form">
+
+					<!-- Various options in drop down menu to
+						select the types of data structures
+						that we need -->
+				<select name="countries" id="countries" multiple>
+    <option value="1">Afghanistan</option>
+    <option value="2">Australia</option>
+    <option value="3">Germany</option>
+    <option value="4">Canada</option>
+    <option value="5">Russia</option>
+</select>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript code to enable the drop down function -->
+
+		
+
+
+
+
+		
+		<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+	</script>
+	<script>
+    new MultiSelectTag('countries')  // id
+    new MultiSelectTag('countries', {
+    rounded: true,    // default true
+    shadow: true,      // default false
+    placeholder: 'Search',  // default Search...
+    tagColor: {
+        textColor: '#327b2c',
+        borderColor: '#92e681',
+        bgColor: '#eaffe6',
+    },
+    onChange: function(values) {
+        console.log(values)
+    }
+})
+</script>
+<script>
+	
+
+
+</script>
+</body>
+
+</html>

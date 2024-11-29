@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select AM/PM in datetime-local</title>
+</head>
+<body>
+<label for="datetime">Select Time:</label>
+<input type="datetime-local" id="datetime" name="datetime">
+<select id="ampm">
+  <option value="AM">AM</option>
+  <option value="PM">PM</option>
+</select>
+
+<script>
+    // Get the datetime-local input element
+    const datetimeInput = document.getElementById('datetime');
+
+    // Get the AM/PM select element
+    const ampmSelect = document.getElementById('ampm');
+
+    // Listen for changes in the AM/PM selection
+    ampmSelect.addEventListener('change', function() {
+        // Get the selected AM/PM value
+        const selectedAmPm = this.value;
+
+        // Get the current value of the datetime-local input
+        let currentValue = datetimeInput.value;
+
+        // Extract the date and time parts
+        const datePart = currentValue.substring(0, 10);
+        let timePart = currentValue.substring(11, 16);
+
+        // Convert time to 12-hour format
+        let hour = parseInt(timePart.substring(0, 2));
+        if (selectedAmPm === 'PM') {
+            hour = (hour % 12) + 12;
+        } else {
+            hour %= 12;
+        }
+
+        // Update the time part with the new AM/PM selection
+        timePart = `${hour.toString().padStart(2, '0')}${timePart.substring(2)}`;
+
+        // Update the value of the datetime-local input
+        datetimeInput.value = `${datePart}T${timePart}`;
+    });
+</script>
+</body>
+</html>

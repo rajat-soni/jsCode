@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback width function Example</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <form id="formId">
+                <input type = "text" id = "userInfo" name = "userInfo" class="form-control" placeholder="Please enter User Name">
+                <button class="btn btn-primary mt-4" type="submit" id = "btnClick" name = "btnClick" onclick = "loginInfo(event)">Login</button>
+            </form>
+
+        <script>
+
+         let isLogin = document.getElementById('userInfo');
+         function loginInfo(event){
+            event.preventDefault();
+          var isUserName = isLogin.value;
+          alert("input value"+isUserName );
+          var isLoginName = "Rajat Verma";
+
+       
+         
+            if(isLoginName == isUserName){
+                window.location.href = "adminPage.html"
+            }else{
+                window.location.href = "UserPage.html"
+            }
+         }
+
+         
+         
+        </script>
+    </body>
+</html>     

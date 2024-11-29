@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="" id="loginForm">
+  <h1>Login</h1>
+  <input type="text"  name = "name"id="username" class="form-control username"  placeholder="Enter your Username...">
+  <input type="text" name = "name" id="password" class="form-control username" placeholder="Enter your Password...">
+  <button type="submit">Submit</button>
+</form>
+<script>
+	var logingForm = document.getElementById("logingForm")
+	loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let username = document.getElementsByName('name');;
+   var userName =  username[0].value;
+     var password =  username[1].value;
+     alert(userName)
+       alert(password)
+
+
+
+  if (userName.value == "" || password.value == "") {
+    // throw error
+  } else {
+    // perform operation with form input
+  }
+});
+
+	
+</script>
+</body>
+</html>

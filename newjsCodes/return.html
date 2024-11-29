@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
+</head>
+<body>
+
+    
+
+
+<script>
+    function getTicket(valid){
+        if(ticket >= 40){
+            return true;
+        }else{
+            alert("Ticket not valid!")
+        }
+    }
+    var ticket = prompt("Plase enusre the valid Ticket",50);
+    if(getTicket(ticket)){
+        alert("valid ticket!")
+    }else{
+        alert("ticket is not valid!")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
+</head>
+<body>
+    <form>
+    <input type="number" class="form-control" id="emp_id" class="emp_id"  value = "26" >
+    <input type = "submit"  name = "submit" value ="click me">
+</form>
+
+<script>
+   let emp = document.getElementById('emp_id');
+   var emp_value = emp.value;
+
+
+    function getEmpAge(age){
+       
+        if(age >= 25){ alert("I am considering beform return.");
+            return true;
+        }else{alert("I am considering beform return2.");
+            return false;
+        }
+    }
+    var age = emp_value;
+    if(getEmpAge(age)){
+        alert("you are welcom!")
+    }else{
+        alert("you are not welcome!")
+    }
+
+</script>
+</body>
+</html>

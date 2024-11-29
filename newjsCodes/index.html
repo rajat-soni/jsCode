@@ -16,16 +16,16 @@
 function greetings(username) {
   alert('Welcome ' + username);
 }
-//the function declaration above is to be passed into the function below thereby making it a callback function.
+//The function declaration above is to be passed into the function below thereby making it a callback function.
 
 function saveUserName(callback) {
-  var name = prompt('Please enter your username.');
-  callback("Rajat");
+  var username = prompt('Please enter your username.');
+  callback(name);
 }
-//the above function states the callback function as a parameter
+//The above function states the callback function as a parameter
 
 saveUserName(greetings);
-//the greetings function (the callback function), is initially declared, then invoked by passing it as an argument into another function.
+//The greetings function (the callback function), is initially declared, then invoked by passing it as an argument into another function.
 
 </script>
 

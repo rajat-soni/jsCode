@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Return Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <di class="card mt-4">
+                    <div class="card-header">Return function check</div>
+                    <div class="card-body">
+                            <form>
+
+                                <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Emp No</label>
+                                <input type="number" class="form-control" id="emp_id" value = "25" aria-describedby="emailHelp">
+                                <div id="emp" class="form-text text-danger"></div>
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>
+                              <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <div class="card-footer">all rights reserved in @2024</div>
+                    </div>
+    
+        </div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+<script>
+    var emp_id_1 = document.getElementById('emp_id');
+    var emp_id_Value = document.getElementById('emp_id').value;
+
+    var exampleInputEmail1 = document.getElementById('exampleInputEmail1');
+    
+
+        var exampleInputPassword1 = document.getElementById('exampleInputPassword1')
+
+
+    function getTicket(vaildAge,question){
+        if(vaildAge == emp_id_Value){
+      
+            return true;
+        }else{
+          
+            alert("You are not adult to watch movies!"+question)
+            //exampleInputPassword1.style.display = 'none';
+         document.getElementById('emp').innerHMTL = 'Emp no and vaild age no is not equl!';
+           //alert("emp_id"+emp_id_Value );
+             
+        }
+    }
+    var vaildAge = prompt("your age value is here", 25);
+    if(getTicket(vaildAge,"Valid age for movies is above 25 years.")){
+        exampleInputEmail1.style.display='none';
+        alert(" you are enough Adult to watch the movies !")
+    }else{
+       
+        alert("You are not enough adult to watch the movies !")
+
+    }
+</script>
+
+</body>
+</html>

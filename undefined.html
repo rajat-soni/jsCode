@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	
+	 	
+
+
+</head>
+<body>
+
+<p id = "par"></p>
+<div class="row">
+	<div class="col-md-6">1</div>
+	<div class="col-md-6">2</div>
+</div>
+
+<script>
+	
+
+  // way of declaring string and template literals(backtic character)  in js //
+ 
+ // primitive type//
+  var str = "hello i am 'Rajat Soni1' from lucknow"; 
+  //single type
+  var str1 = 'hello i am "Rajat Soni" form lucknow';
+
+  // for backtick type or template literal type usally we use backtick when we want multiple lines of strings
+  var str2  = `<h1>hello i am 'Rajat Soni' form lucknow <br>  I have done MCA in 2018 <br> ${str} <h1>`;
+  document.getElementById("par").innerHTML=str2;
+  console.log(str);
+  console.log(str1);
+  console.log(str2);
+
+  //assignment operator ///
+
+  var a = 10;
+   a +=  5; // a = a+5 now value of a is 15.
+   console.log(a)
+
+</script>
+
+
+
+	<!-- 
+       //  for undefined code 
+	 	// var a;
+	 	// if(a == undefined){
+	 	// 	alert("undefined");
+	 	// }else{
+	 	// 	alert("valide value");
+	 	// }
+
+	 	 // for null code 
+	 	// var a = null;
+	 	// if(a == null){
+	 	// 	alert("undefined");
+	 	// }else{
+	 	// 	alert("valide value");
+	 	// }
+	form id = "form">
+<div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" id="usr" name = "user">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="text" class="form-control" id="pwd" name = "password">
+  <p id = "para"></p>
+</div>
+<input type = "submit" class="form-control  btn btn-primary" >
+</form> -->
+
+
+	
+
+
+
+
+<!--var user = document.getElementById('usr');
+var para = document.getElementById('para');
+
+user.addEventListener('input',(e) =>{
+	console.log(e.target.value);
+	})
+para.addEventListener('input', (e) => {
+
+para.innerHTML = e.target.value;
+console.log(para.innerHTML);
+
+})-->
+
+<!-- var form = document.getElementById('form')
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+
+ console.log(e.target.form.value)
+
+}) */
+
+
+
+</body>
+</html>

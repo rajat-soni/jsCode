@@ -1,0 +1,27 @@
+let question = "Do you want to get in the bus?";
+
+function allCal(discription, getTicket, dropTicket) {
+    if (confirm(question)) {
+        let result = getTicket();
+        alert("get in bus: " + result);  
+    } else {
+        let result = dropTicket();
+        alert("bus has droped !: " + result);  
+    }
+}
+
+let getTicket = () => {
+    let a = 10;
+    let b = 10;
+    let get = a + b;
+    return get;
+}
+
+let dropTicket = () => {
+    let a = 10;
+    let b = 10;
+    let drop = a - b;
+    return drop;
+}
+
+allCal("Bus is on time?", getTicket, dropTicket);

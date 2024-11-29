@@ -16,13 +16,11 @@
 </body>
 <script>
 
-	const person = {
-        id : 1,
-	    name: 'Wes',
-	    job: 'Web Developer',
-	    city: 'Hamilton',
-	    bio: 'Wes is a really cool guy that loves to teach web development!'
-	}
+	const  persons = [
+    { id: 1, name: 'Alice', job: 'Engineer', city: 'New York' },
+    { id: 2, name: 'Bob', job: 'Designer', city: 'San Francisco' },
+    { id: 3, name: 'Charlie', job: 'Developer', city: 'Seattle' }
+];
 
 
 
@@ -34,7 +32,7 @@
 		setTimeout(function() {
 			callback();		
 
-		},2000);
+	},3000);
 
 
          
@@ -44,34 +42,37 @@
 // Define the callback function
 	function callBackFun(){
         
-         	var i =   `
-           
-         	<table class="table">
-							<thead>
-							    <tr>
-								    <th scope="col">Name</th>
-								    <th scope="col">Job</th>
-								    <th scope="col">City</th>
-								    <th scope="col">Action</th>
-							    </tr>
-							</thead>
-							<tbody>
-							    <tr>  
+         	const rows = persons.map(person =>  `<tr>
+         		<tbody>
+						  
+							      <td>${person.id}</td>
 								    <td>${person.name}</td>
 								    <td>${person.job}</td>
-								    <td>${person.city}</td>
+								    
 								    <td><button class="btn btn-sm btn-danger">Delete</button></td>
+								    </tbody>
 							    </tr>
-							    
 
-							 
-							    
-							</tbody>
-						</table>
-						    `;
-				
-          var doc = document.getElementById('vi')
-          doc.innerHTML = i;
+			`).join();
+
+
+         
+          var doc = document.getElementById('vi');
+    doc.innerHTML = `
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Job</th>
+                    <th scope="col">City</th>
+                    <th scope="col" >Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${rows}
+            </tbody>
+        </table>
+    `;
     }
 
    
