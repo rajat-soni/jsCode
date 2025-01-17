@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
+</head>
+<body>
+    <script>
+
+function executeTask(task) {
+    console.log("Task started.");
+    task.action();  // object से action function को call करना
+    console.log("Task completed.");
+}
+
+// Arrow function को object के रूप में pass करना
+executeTask({
+    action: () => {
+        console.log("Performing the task with an arrow function...");
+    }
+});
+
+</script>
+</body>

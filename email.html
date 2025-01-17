@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Template</title>
+  <style type="text/css">
+    /* General Styles (Gmail) */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      border-spacing: 0;
+    }
+    img {
+      display: block;
+      border: 0;
+    }
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+      }
+      .footer-column {
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Outlook specific styles -->
+<!--[if mso]>
+  <style type="text/css">
+    .email-container {
+      width: 600px !important;
+    }
+  </style>
+<![endif]-->
+
+<!-- Main Email Content -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4; padding: 20px 0;">
+  <tr>
+    <td align="center">
+
+      <!-- Email Container -->
+      <table role="presentation" class="email-container" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border: 1px solid #dddddd;">
+        
+        <!-- Title Section -->
+        <tr>
+          <td style="padding: 20px; text-align: center;">
+            <h1 style="font-size: 24px; color: #333333; margin: 0;">Welcome to Our Newsletter</h1>
+            <p style="font-size: 16px; color: #666666; margin: 10px 0 0;">Stay updated with the latest news.</p>
+          </td>
+        </tr>
+
+        <!-- Header Section -->
+        <tr>
+          <td style="padding: 15px 20px; text-align: center; background-color: #007bff; color: #ffffff;">
+            <h2 style="font-size: 20px; margin: 0;">We're thrilled to have you with us!</h2>
+          </td>
+        </tr>
+
+        <!-- Body Section -->
+        <tr>
+          <td style="padding: 20px; text-align: left;">
+            <p style="font-size: 16px; color: #333333; margin: 0 0 10px;">Thank you for subscribing to our newsletter. We’re excited to have you with us!</p>
+            <p style="font-size: 16px; color: #333333; margin: 0 0 10px;">We will send you regular updates about our new products, events, and promotions.</p>
+          </td>
+        </tr>
+
+        <!-- Button Section -->
+        <tr>
+          <td style="padding: 20px; text-align: center;">
+            <a href="https://www.example.com" style="font-size: 16px; color: #ffffff; background-color: #007bff; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block;">
+              Visit our website
+            </a>
+          </td>
+        </tr>
+
+        <!-- Footer Section with Two Columns -->
+        <tr>
+          <td style="padding: 20px; text-align: center; background-color: #f4f4f4;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <!-- Column 1 -->
+                <td class="footer-column" width="50%" style="padding: 10px; text-align: center;">
+                  <p style="font-size: 14px; color: #666666; margin: 0;">Follow Us</p>
+                  <img src="https://www.example.com/images/social-icon.png" alt="Social Icon" width="50" height="50" style="margin-top: 10px;">
+                </td>
+                <!-- Column 2 -->
+                <td class="footer-column" width="50%" style="padding: 10px; text-align: center;">
+                  <p style="font-size: 14px; color: #666666; margin: 0;">Contact Us</p>
+                  <img src="https://www.example.com/images/contact-icon.png" alt="Contact Icon" width="50" height="50" style="margin-top: 10px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Footer Text Section -->
+        <tr>
+          <td style="padding: 20px; text-align: center; background-color: #f4f4f4;">
+            <p style="font-size: 14px; color: #666666;">You are receiving this email because you subscribed to our newsletter.</p>
+            <p style="font-size: 14px; color: #666666;">If you no longer wish to receive these emails, <a href="#" style="color: #007bff;">unsubscribe here</a>.</p>
+          </td>
+        </tr>
+      </table>
+      <!-- End Email Container -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Main Email Content -->
+
+</body>
+</html>

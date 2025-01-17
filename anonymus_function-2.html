@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
+</head>
+<body>
+    <script>
+
+function runOperation(operation) {
+    console.log("Operation started.");
+    operation.execute();  // execute function को call करना
+    console.log("Operation finished.");
+}
+
+// Object में different anonymous functions pass करना
+runOperation({
+    execute: function() {
+        console.log("Performing addition.");
+    }
+});
+
+runOperation({
+    execute: function() {
+        console.log("Performing subtraction.");
+    }
+});
+
+</script>
+</body>
+</html>

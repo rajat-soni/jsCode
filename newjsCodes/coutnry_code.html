@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Code Dropdown by Country</title>
+</head>
+<body>
+
+    <!-- Country Dropdown -->
+    <label for="country">Select Country:</label>
+    <select id="country" onchange="updateCountryCodeDropdown()">
+        <option value="">--Select Country--</option>
+        <option value="" Selected></option>
+        <option value="AUS">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+    </select>
+
+    <br><br>
+
+    <!-- Country Code Dropdown -->
+    <label for="countryCode">Select Country Code:</label>
+    <select id="countryCode">
+        <option value="">--Select Country Code--</option>
+    </select>
+
+    <br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" name="mobile" placeholder="Mobile number will appear here" readonly/>
+
+    <script>
+        // Object storing country codes based on countries
+        let countryCodes = {
+            "AUS": ["+61","+64"],   // Multiple codes for India
+            "USA": ["+1"],
+            "UK": ["+44"],
+            "Canada": ["+1"]
+        };
+
+        // Function to update country code dropdown based on selected country
+        function updateCountryCodeDropdown() {
+            // Get selected country from the country dropdown
+            let selectedCountry = document.getElementById("country").value;
+            let countryCodeDropdown = document.getElementById("countryCode");
+            let mobileInput = document.getElementById("mobile");
+
+            // Clear previous country codes in the dropdown
+            countryCodeDropdown.innerHTML = '<option value="">--Select Country Code--</option>';
+
+            // If a country is selected, populate the country code dropdown
+            if (selectedCountry) {
+                let codes = countryCodes[selectedCountry];
+                
+                // Populate the country code dropdown with the respective codes
+                codes.forEach(function(code) {
+                    let option = document.createElement("option");
+                    option.value = code;
+                    option.textContent = code;
+                    countryCodeDropdown.appendChild(option);
+                });
+
+                // Set the first country code by default
+                mobileInput.value = codes[0] + " " + "1234567890";  // Example mobile number
+            } else {
+                mobileInput.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

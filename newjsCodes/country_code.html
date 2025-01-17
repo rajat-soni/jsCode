@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>International telephone input</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+
+<!-- jQuery, Popper & Bootstrap JS library -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+<!-- Shards-UI JS library -->
+<script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+
+<!-- Font Awesome & Bootstrap Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+<!-- intl-tel-input mobile country code UI -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+
+  <script>
+    $(function () {
+            var code = "+19876543210"; // Assigning value from model.
+            $('#mobile').val(code);
+            $('#mobile').intlTelInput({
+                autoHideDialCode: true,
+                autoPlaceholder: "ON",
+                dropdownContainer: document.body,
+                formatOnDisplay: true,
+               // hiddenInput: "full_number",
+                initialCountry: "us",
+              //  nationalMode: true,
+                placeholderNumberType: "MOBILE",
+                preferredCountries: ['us','gb','in'],
+                separateDialCode: true
+            });
+            $('#btn-submit').on('click', function () {
+                var code = $("#mobile").intlTelInput("getSelectedCountryData").dialCode;
+                var phoneNumber = $('#mobile').val();
+              //  $('#mobile').val(code+phoneNumber);
+                //  alert('Country Code : ' + code + '\nPhone Number : ' + phoneNumber );
+                document.getElementById("code").innerHTML = code;
+                document.getElementById("mobile-number").innerHTML = phoneNumber;
+            });
+        });
+
+</script>
+
+ </head>
+ <body>
+  <!------------------------------------------------------------------------------
+        Bootstrap, Shards-UI, Font Awesome, dataTables, moment.js & jQuery CDN
+--------------------------------------------------------------------------------->
+<!-- Bootstrap & Shards-UI CSS -->
+
+<div class="container mt-5">
+  <!-- form -->
+  <div class="form-group">
+      <label for="login-mobile" class="font-weight-bold text-dark">Mobile</label>
+      <div class="input-group input-group-sm">
+          <input id="mobile" type="tel" name="mobile" class="form-control" autofocus required   style="width:500px;">
+      </div>
+  </div>
+  
+  
+   <!-- Submit Button -->
+  <div class="form-group mt-3">
+    <button id="btn-submit" type="submit" class="btn btn-primary font-weight-bold">Submit</button>
+  </div>   
+  
+  <!-- Result area -->
+  <div class="result mt-5">
+    <h3>Result</h3>
+    <h6>Country Code</h6>
+    <p class="text-primary" id="code"></p>
+     <h6>Mobile Number</h6>
+    <p class="text-primary" id="mobile-number"></p>
+  </div>
+</div>
+ </body>
+  
+ </script>
+</html>

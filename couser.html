@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
+</head>
+<body>
+    <script>
+        const callCallBack = (name, first, second) => {
+            alert("hello i am " + name);  // सबसे पहले यह अलर्ट दिखाएगा: "hello i am Rajat"
+            
+            // first को object के रूप में पास किया गया है, तो पहले इसे एक्सेस करें
+            first.CallBack();              // first.CallBack() को कॉल करें
+
+            // second को object के रूप में पास किया गया है, तो इसे एक्सेस करें
+            second.CallBack2();           // second.CallBack2() को कॉल करें
+        };
+
+        const CallBack = () => {
+            alert("hello i am call back");  // यह अलर्ट दिखाएगा: "hello i am call back"
+        };
+
+        const CallBack2 = () => {
+            alert("hello i am call back2");  // यह अलर्ट दिखाएगा: "hello i am call back2"
+        };
+
+        // यहाँ first और second को सही तरीके से ऑब्जेक्ट के रूप में पास किया गया है
+        callCallBack("Rajat", { 
+            CallBack: CallBack,  // first को object के रूप में पास किया गया है, जिसमें CallBack है
+        }, {
+            CallBack2: CallBack2  // second को object के रूप में पास किया गया है, जिसमें CallBack2 है
+        });
+    </script>
+</body>
+</html>

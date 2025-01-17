@@ -14,17 +14,27 @@
         <script>
 
          
-            function outer(a = 10, b=30){
-                function inner(){
-                 return a+b;
-                }
+            // function outer(a = 10, b=30){
+            //     function inner(){
+            //      return a+b;
+            //     }
 
-                return outer();
-            }
+            //     return outer();
+            // }
              
-            let outerFun = outer()
-            alert(outerFun);
+            // let outerFun = outer()
+            // alert(outerFun());
          
+
+         function outer(a = 10, b = 30){
+    function inner(){
+        return a + b; // inner function a और b का जोड़ देता है
+    }
+    return inner; // inner को return करें, outer नहीं
+}
+
+let outerFun = outer(); // outer को कॉल किया जाता है, और यह inner function को return करता है
+alert(outerFun()); //
         </script>
     </body>
 </html>     

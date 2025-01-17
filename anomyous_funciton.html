@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi_arrow_function-pass as object during function call</title>
+</head>
+<body>
+    <script>
+
+function executeTask(task) {
+    console.log("Task started.");
+    let result1 = task.action1();  // पहला action function
+    let result2 = task.action2();  // दूसरा action function
+    let finalResult = task.finalAction(result1, result2); // दोनों results को finalAction में पास करना
+    console.log("Final Result:", finalResult);
+    console.log("Task completed.");
+}
+
+// multiple arrow functions with return values
+executeTask({
+    action1: () => {
+        console.log("Performing the first task...");
+        return 5;
+    },
+    action2: () => {
+        console.log("Performing the second task...");
+        return 10;
+    },
+    finalAction: (result1, result2) => {
+        console.log("Combining results...");
+        return result1 + result2;  // दोनों results को जोड़ना
+    }
+});
+
+</script>
+</body>
+    <html>

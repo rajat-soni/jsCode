@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p id="demo"></p>
+
+<script type="module">
+import { name,age,oldData } from "./person.js";
+import persn from './person.js';
+import {loginClick,renderApp,renderLogin} from './person.js';
+
+
+
+document.getElementById("demo").innerHTML = "My name is " + name;
+document.getElementById("demo").innerHTML += ", I am " + age + ".";
+document.getElementById("demo").innerHTML += ", totle " + persn(10,30) + ".";
+document.getElementById("demo").innerHTML += ", dep " + oldData.dep + ".";
+document.getElementById("demo").innerHTML += ", Role " + oldData.role + ".";
+document.getElementById("demo").innerHTML += ", logic Click " + loginClick(renderApp,renderLogin) + ".";
+
+
+
+ console.log(persn(10,30));
+</script>
+
+</body>
+</html>

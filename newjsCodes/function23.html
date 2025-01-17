@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Coulser Function</title>
+          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+        
+        <script>
+
+//  first program
+
+// function ask(question, yes, no) {
+// if (confirm(question)){ yes()
+//    }else no();
+//  }
+
+
+//  function showOk() {
+//   alert( "You agreed." );
+//  }
+
+//  function showCancel() {
+//    alert( "You canceled the execution." );
+//  }
+
+ // ask("Do you agree?", showOk, showCancel);
+
+
+          //  Second program
+
+          // function  allcall (question,yes,no) {
+
+          //   if(confirm(question)){ 
+          //     yes()
+            
+          //   }else {no()
+          //   }
+          // }
+          
+          // // function yes(){
+          // //   alert("i am yes")
+          // // }
+
+
+          // //  function no(){
+          // //   alert("i am no")
+          // // }
+
+          // function callOne(){
+          //   alert(" i am callOne!")
+          // }
+
+          // function callNo(){
+          //   alert("i am callNo!")
+          // }
+
+          // allcall("i am justify you?", callOne,callNo)
+
+
+
+          //  third program
+
+
+          // function greet() {
+          //   console.log("Hello, world!");
+          // }
+
+          // function callFunction(fn) {
+          //   fn(); // यहाँ fn() कॉल हो रहा है
+          // }
+
+          // // greet फ़ंक्शन का रैफरेंस pass किया गया है
+          // callFunction(greet);
+
+
+
+                       //  forth program
+
+          function greet (a,b){  // a = 10 ho raha hai or b = 20 ho raha hai 
+            var sum = a+b;
+
+           return  sum 
+
+
+          }
+
+          function smile (a,b){ // a = 30 ho raha hi or b = 40 ho raha hai 
+            var sum = a-b;
+
+            return sum
+
+          }
+
+          function callBack(fun,second){
+
+             // fun = greet
+             // second = smile me coverte ho raha hai.
+         var  greetResult =  fun(10,20)
+          var smileResult =function addTen(number) {
+    return number + 10;
+}
+
+const firstNumber = addTen(1);   second(30,40)
+
+            console.log("Result from greet function (add): " + greetResult);  // greet से प्राप्त 30 को प्रिंट किया
+            console.log("Result from smile function (subtract): " + smileResult);  // smile से प्राप्त -10 को प्रिंट किया
+          }
+
+          callBack(greet,smile)
+
+
+
+
+
+    //  fifth program
+
+//   function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); },
+//   function() { alert("You canceled the execution."); }
+// );
+
+
+
+ //  Sixth program
+
+// function performOperation(a, b, operation) {
+//     return operation(a, b);
+// }
+
+
+// function  addNumbers (a,b) {
+//   return  a+b
+// }
+
+
+// let result = performOperation(5, 10, addNumbers);
+// console.log(result);  // 15
+
+        </script>
+      </body>
+  </html>
