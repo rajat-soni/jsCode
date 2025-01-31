@@ -12,13 +12,14 @@
 
 
 <script>
+	// note point:  phele saveUserName funciton call hoga ye function k ander ek call back function hai jiska name  greeting hai greetins = callback ab call back me a argument rajat pass kiya gya hai ab ya se callback("raja") se greeting function call kiya jata hai  jo ek aert dekhata hai or name ko as rajat leta hai or vpas saveUser k pass a jata hai 
 function greetings(username) {
   alert('Welcome ' + username);
 }
 //the function declaration above is to be passed into the function below thereby making it a callback function.
 
 function saveUserName(callback) {
-  var name = prompt('Please enter your username.');
+  // var name = prompt('Please enter your username.');
   callback("Rajat");
 }
 //the above function states the callback function as a parameter

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log('Outer context: ', this.name); // यहाँ 'this' person object को refer करेगा
+    
+    const arrowFunc = () => {
+
+        let name = "mohan";
+      console.log('Arrow function context: ', this.name);  // Arrow function का 'this' outer context (greet function) से आएगा
+    };
+    
+    arrowFunc();
+  }
+};
+
+person.greet();
+
+</script>
+</body>
+</html>

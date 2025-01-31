@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi_arrow_function-pass as object during function call</title>
+</head>
+<body>
+    <script>
+
+function Formal (tastwithstring,task){
+
+
+console.log(tastwithstring);
+    task.functonOne();
+    task.functionTwo();
+    task.functionThree();
+}
+
+
+Formal ("hhello i example of function as boject",{
+
+    functonOne: () => {
+
+        console.log("hello i am function one")
+
+    },
+
+    functionTwo: () => {
+console.log("hello i am function two")
+
+    },
+    functionThree:  () => {
+        console.log("hello i am function three")
+
+    },
+})
+
+</script>
+</body>
+    <html>

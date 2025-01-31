@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi_arrow_function-pass as object during function call</title>
+</head>
+<body>
+    <script>
+
+        const user = {
+    name: "rajat",
+    degi: "developer",
+    skills: {
+        front: "php",
+        backend: "node"
+    }
+};
+       const funcCall = ({ name, degi, skills }) => {
+    return(`my name is ${name} and degi is ${degi} and skills are ${skills.front}, ${skills.backend}`);
+};
+
+// Calling the function and passing the user object
+
+
+const data = funcCall(user);
+
+function getAnotherFun(data){
+
+    if(data[0] == data[1]){
+
+    console.log("jepp"+data)
+}else{
+    console.log("jeppmmmmmu"+data)
+}
+
+}
+
+getAnotherFun(data);
+
+</script>
+</body>
+</html>

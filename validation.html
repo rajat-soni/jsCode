@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    
+
+    
+</head>
+<body>
+<form action="Alpha-LP-3121393.2-UKG-2-sendmail.php" method="POST" id="sky-form" class="sky-form" autocomplete="off">
+  
+  <!-- First Name Field -->
+  <section>
+    <label class="input">
+      <input type="text" name="firstname" placeholder="First name" id="firstname" >
+      <b class="tooltip tooltip-bottom-right">Enter First Name</b>
+      <span id="firstname-error" style="color:red;"></span>
+    </label>
+  </section>
+  
+  <!-- Last Name Field -->
+  <section>
+    <label class="input">
+      <input type="text" name="data[0]" placeholder="Last name" id="lastname" >
+      <b class="tooltip tooltip-bottom-right">Enter Last Name</b>
+      <span id="lastname-error" style="color:red;"></span>
+    </label>
+  </section>
+
+  <section>
+    <label class="input">
+      <input type="email" name="data[3]" placeholder="Email" id="email" >
+      <b class="tooltip tooltip-bottom-right">Enter Email</b>
+      <span id="email-error" class="error-message" style="color:red;"></span>
+    </label>
+  </section>
+
+  <!-- Checkboxes for Strategic Initiatives -->
+  <section>
+    <p style="text-align: left; font-size: 13px;">
+      <b>What are your top 3 strategic initiatives this year as it relates to workforce management?</b>
+    </p>
+    <label>
+      <input type="checkbox" name="data[9][]" value="Improve planning agility" id="cq1">&nbsp; Improve planning agility
+      <br>
+      <input type="checkbox" name="data[9][]" value="Gain alignment across Operations, HR, and Finance" id="cq2">&nbsp; Gain alignment across Operations, HR, and Finance
+      <br>
+      <input type="checkbox" name="data[9][]" value="Empower and grow your people" id="cq3">&nbsp; Empower and grow your people
+      <br>
+      <input type="checkbox" name="data[9][]" value="Enhance visibility and control" id="cq4">&nbsp; Enhance visibility and control
+      <br>
+      <input type="checkbox" name="data[9][]" value="Ensure compliance and simplify processes" id="cq5">&nbsp; Ensure compliance and simplify processes
+      <br>
+      <input type="checkbox" name="data[9][]" value="Predict and address workforce gaps" id="cq6">&nbsp; Predict and address workforce gaps
+      <br>
+      <input type="checkbox" name="data[9][]" value="Optimize workforce performance" id="cq7">&nbsp; Optimize workforce performance
+      <br>
+      <span id="checkbox-error" style="color:red;"></span>
+    </label>
+  </section>
+
+  <!-- Submit Button -->
+  <button type="submit" name="submit" class="button" style="background-color: #4c77c7;width: 100%; margin-right: -24px;">Download Now</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#sky-form').submit(function(event) {
+      
+      let valid = true;
+
+      
+      $('#firstname-error').text('');
+      $('#lastname-error').text('');
+      $('#checkbox-error').text('');
+      $('#email-error').text('');
+
+      var firstname = $('#firstname').val();
+      if (firstname === "") {
+        $('#firstname-error').text('First name is not empty');
+        valid = false;
+      }
+
+
+     var email = $('#email').val();
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (email === "") {
+        $('#email-error').text('Please write corredt');
+        valid = false;
+      } else if (!emailRegex.test(email)) {
+        $('#email-error').text('email');
+        valid = false;
+      }
+    
+      var lastname = $('#lastname').val();
+      if (lastname === "") {
+        $('#lastname-error').text('last name is not empty');
+        valid = false;
+      }
+
+     
+      var selectedCheckboxes = $('input[name="data[9][]"]:checked');
+      if (selectedCheckboxes.length === 0) {
+        $('#checkbox-error').text('least one check box is selected');
+        valid = false;
+      }
+      
+  
+      if (selectedCheckboxes.length > 3) {
+        $('#checkbox-error').text('');
+        valid = false;
+      }
+
+
+      if (!valid) {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+ 
