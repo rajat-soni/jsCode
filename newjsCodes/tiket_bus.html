@@ -143,9 +143,11 @@ document.getElementById('formId').reset();
                 
                         getJail();
                         document.getElementById('formId').reset();
-                    }else if (fine = -fine){
+                    }else if (fine >= dpassvalue){
 
-                        alert("your are  not eligible");
+                         
+                        alert("Thank you for fine!");
+                        hpyTra();
 
                     }else{
                 
@@ -175,6 +177,9 @@ document.getElementById('formId').reset();
                 alert("Pick you in jail")
             }
 
+            let hpyTra =() => {
+                alert("Please take your seat in the bus.")
+            }
 
         TaknBus(question,getTicket,getDayPass,thieftfine,getJail);
         
