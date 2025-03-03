@@ -1,0 +1,87 @@
+
+
+.heading {
+  color:red;
+  font-size: 24px;
+}
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navItem {
+  margin-right: 20px;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ .footer {
+  margin-top: 300px;
+}
+
+body {  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.thumbnail {
+  background-image: url("thumbnail.png");
+ 
+  width: 30%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding:  0px 10px;
+}
+
+
+.main_heading {
+	padding-top: 50px;
+	padding-left: 0px;
+}
+
+.para{
+	padding-top: 30px;
+	padding-left: 0px;
+}
+
+.card {
+  max-width: 540px; 
+  height: auto;
+}
+
+/* .card {
+  background-image: url("120240927153217.png");
+  max-width: 540px; 
+  height: 200px;
+} */
+ .webinar-heading {
+  margin-top: 50px;
+ }
+
+ #fHeading{
+
+  font-size: 32px;
+ }
+ 
+
+ .card{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+
+
+ @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+ .form {-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+
+
+ @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}

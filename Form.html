@@ -1,0 +1,179 @@
+import React from 'react'
+import { useForm } from 'react-hook-form'
+//import { devTool } from '@hookform/devtools'
+
+const Form = () => {
+
+    function submitData(e){
+        e.priventDefault()
+    }
+ const form = useForm();
+  const { register,control} =  form;
+  
+
+//   const onSubmit = (data) => {
+//     console.log(data);
+//   };
+  return (
+<div class="col-md-4 col-xl-4 col-lg-4 col-12 col-sm-12">
+    <div className ="card ">
+        <div className=" p-3"  id = "fHeading">Downlaod Webinar</div>
+            <div className="card-body">
+                <form  onSubmit={submitData}>
+
+                    <div class="row">
+                        <div className="col">
+                            <div className="mb-3">
+                            <input type="text" className="form-control"  id="firstname" Placeholder = "First Name *" required />
+
+                            </div>
+                        </div>
+
+                        <div className="col">
+                            <div classname="mb-3">
+                                <input type="text" class="form-control" id="last_name"  Placeholder = "Last Name *" required />
+                            </div>
+                        </div>    
+                    </div>
+                    <div className = "row">
+                  
+                    <div className="col">
+                            <div className="mb-3">
+                            <input type="text" className="form-control"  id="company" Placeholder = "Company Name *" required />
+
+                            </div>
+                        </div>
+
+                        <div className="col">
+                            <div classname="mb-3">
+                                <input type="text" class="form-control" id="jobtitle"  Placeholder = "Job title *" required />
+                            </div>
+                        </div>   
+
+                    </div>
+                    <div className = "row">
+                  
+                  <div className="col">
+                          <div className="mb-3">
+                          <input type="text" className="form-control"  id="servername" Placeholder = "Server Name *" required />
+
+                          </div>
+                      </div>
+
+                      <div className="col">
+                          <div classname="mb-3">
+                              <input type="text" class="form-control" id="depantmentname"  Placeholder = "Department Name *" required />
+                          </div>
+                      </div>   
+
+                  </div>
+
+
+                  {/* <div class="row">
+                   <div class="col">
+                      <div class="mb-3">
+                         <select class="form-select" name="data[3]" required="" id="job_role" aria-label="Default select example"  style = {{color: '#6F8394 !important'}}>
+                            <option selected value = ""  style = {{color: '#6F8394 !important'}}>Job Role</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                   <div class="col">
+                      <div class="mb-3">
+                         <select class="form-select" id = "revenue" name="data[10]" aria-label="Default select example" required style = {{color: '#6F8394 !important'}} >
+                            <option selected value = "" style = {{color: '#6F8394 !important'}}>Revenue</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                </div>
+                    
+                <div class="row">
+                   <div class="col">
+                      <div class="mb-3">
+                         <select class="form-select" aria-label="Default select example" id = "job_function" name="data[9]" required style = {{color: '#6F8394 !important'}} >
+                            <option selected value = "" style = {{color: '#6F8394 !important'}}>Job Function</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                   <div class="col">
+                      <div class="mb-3">
+                         <select class="form-select" aria-label="Default select example" id = "industry" name="data[4]" required style = {{color: '#6F8394 !important'}}>
+                            <option selected value = "" style = {{color: '#6F8394 !important'}}>Industry</option>
+
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                </div>
+
+                <div className="row">
+                   <div className="col">
+                      <div className="mb-3">
+                         <select className="form-select" aria-label="Default select example" id = "country" name="data[5]"  required style = {{color: '#6F8394 !important'}}>
+                            <option selected value = "">Country</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                   <div class="col">
+                      <div class="mb-3">
+                         <select class="form-select" aria-label="Default select example" id = "state" name="data[20]" required  style = {{color: '#6F8394 !important'}} >
+                            <option selected value = "">State</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                         </select>
+                      </div>
+                   </div>
+                </div> */}
+                <div className="mb-3">
+                   <input type="number" className="form-control"  aria-describedby="emailHelp" placeholder="Zip Code *" id = "zipcode"    required />
+                </div>
+                <div className="mb-3">
+                   <input type="text" className="form-control"  aria-describedby="emailHelp" placeholder="Adress *" id = "address"  required />
+                </div>
+                
+
+                 <div className="mb-3">
+                   <input type="text" className="form-control" aria-describedby="emailHelp"  placeholder="Custom question *" id = "cq"   required />
+                </div>
+
+                <div className="form-check mt-4 mb-4">
+                   <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                   <label className="form-check-label" for="flexCheckDefault"style = {{fontSize:'13px'}} />
+                   I would like to receive information from suppliers who sponsor this content and are willing to share the above information with AWS.
+
+                   
+                </div> 
+
+                <div className="mb-3 mt-4">
+                  
+                   <button type="submit" class="btn  btn-lg shadow" style = {{ backgroundColor:'#2b98fb', borderRadius: '0px', border: 'none !important', dispay:'block', width: '100%',paddingTop: '10px',
+paddingBottom: '10px', color:'#fff',}} id = 'btn-set'>Watch  Now</button>
+                </div>
+
+                </form>
+              
+            </div>
+            
+           
+        </div>
+        
+    </div>
+
+  )
+}
+
+export default Form;

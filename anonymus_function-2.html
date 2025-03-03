@@ -8,23 +8,61 @@
 <body>
     <script>
 
-function runOperation(operation) {
-    console.log("Operation started.");
-    operation.execute();  // execute function को call करना
-    console.log("Operation finished.");
+  // anonoymous function example //
+// function runOperation(operation) {
+//     console.log("Operation started.");
+//     operation.execute();  // execute function को call करना
+//     console.log("Operation finished.");
+// }
+
+// // Object में different anonymous functions pass करना
+// runOperation({
+//     execute: function() {
+//         console.log("Performing addition.");
+//     }
+// });
+
+// runOperation({
+//     execute: function() {
+//         console.log("Performing subtraction.");
+//     }
+// });
+
+// runOperation function definition  
+ // ye example arrow function ka hai or upper wala anonymous funtion ka hai //
+// const runOperation = (operation) => {
+//     console.log("Operation perform..!");
+//     operation.task(10, 20);  // pass 10 and 20 to task function
+// }
+
+// // task function definition
+// const task = (a, b) => {
+//     const result = a + b;
+//     console.log(`The sum of ${a} and ${b} is: ${result}`);
+// }
+
+// // runOperation calling with task function
+// runOperation({
+//     task: task  // passing the task function here
+// });
+
+// ab task function with return type //
+const runOperation = (operation) => {
+    console.log("runOperation function started..!");
+    const result = operation.task(10, 20);  // Now it stores the returned result
+    console.log(result);  // Print the returned value
+    console.log("runOperation function ended..!");
 }
 
-// Object में different anonymous functions pass करना
-runOperation({
-    execute: function() {
-        console.log("Performing addition.");
-    }
-});
+// task function definition
+const task = (a, b) => {
+    const result = a + b;
+    return `The sum of ${a} and ${b} is: ${result}`;
+}
 
+// runOperation calling with task function
 runOperation({
-    execute: function() {
-        console.log("Performing subtraction.");
-    }
+    task: task  // passing the task function here
 });
 
 </script>

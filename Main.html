@@ -1,0 +1,84 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';  // Import hooks for navigation
+import './NavbarCss.css';
+import Homedata from './Homedata';
+import Aboutus from './Aboutus';
+import Service from './Service';
+import MainR from './MainR';
+import Footer from './Footer';
+
+const Cont = () => {
+  const location = useLocation();  // Get the current route
+ console.log(location)
+// 
+  // Function to decide which content to render in the left column
+  const getLeftColumnContent = () => {
+    switch (location.pathname) {
+      case "/about":
+        return <Aboutus />;
+      case "/services":
+        return <Service />;
+        case "/MainR":
+          return <MainR />;
+      default:
+        return <Homedata />;
+    }
+  };
+
+  // Function to decide which content to render in the right column
+  const getRightColumnContent = () => {
+    switch (location.pathname) {
+      case "/about":
+        return <div>6</div>;
+      case "/services":
+        return <div></div>;
+      case "/contact":
+        return <div></div>;
+        
+      default:
+        return <div></div>;
+    }
+  };
+
+  return (
+    <div>
+      <div className="container border mt-4">
+        <div className="row">
+          <nav className="navbar">
+            <ul className="navList">
+              <li className="navItem">
+                <Link to="/" className="navLink">Home</Link>
+              </li>
+              <li className="navItem">
+                <Link to="/about" className="navLink">About</Link>
+              </li>
+              <li className="navItem">
+                <Link to="/services" className="navLink">Services</Link>
+              </li>
+              <li className="navItem">
+                <Link to="/contact" className="navLink">Contact</Link>
+              </li>
+              <li className="navItem">
+                <Link to="/MainR" className="navLink">New Componet</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Left Column */}
+          <div className="col-md-12">
+            {getLeftColumnContent()} {/* Render content based on current route */}
+          </div>
+
+          {/* Right Column */}
+          <div className="col-md-6">
+          {getRightColumnContent()}{ /*  Render additional content based on current route */}
+          </div>
+        </div>
+        <Footer />
+      </div>
+     
+    </div>
+  );
+};
+
+export default Cont;

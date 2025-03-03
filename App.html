@@ -1,0 +1,23 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import Parent from './Parent';  // Assuming you have this component for your header/navbar
+
+import Cont from './Cont'; // The container component that holds the two columns
+
+function App() {
+  return (
+    <Router>
+     
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<Main />} />
+        <Route path="/services" element={<Main />} />
+        <Route path="/contact" element={<Main />} />
+        <Route path="/MainR" element={<Main />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
